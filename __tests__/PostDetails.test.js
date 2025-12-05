@@ -53,9 +53,6 @@ describe("PostDetails", () => {
       json: async () => ({}),
     });
 
-    // No Suspense needed now!
-    // We pass params as object, or promise, doesn't matter since use is mocked.
-    // But propType might matter.
     render(<PostDetails params={{ id: mockId }} />);
 
     // Check for "Post Details" h1

@@ -15,9 +15,6 @@ describe("Navbar", () => {
   it("toggles mobile menu", () => {
     render(<Navbar />);
 
-    // Initial state: hidden on mobile (but standard check is class presence or visibility logic)
-    // Since we can't easily check CSS classes for visibility in jsdom without layout, we'll check class modification
-
     const menuButton = screen.getByRole("button");
     const menuList = screen.getByRole("list");
 
