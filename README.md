@@ -47,7 +47,7 @@ Follow these steps to set up and run the project locally.
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/rvega1204/Nextjs-fullstack-blog-app
     cd fullstack-blog-app
     ```
 
@@ -80,6 +80,19 @@ Follow these steps to set up and run the project locally.
 - `npm run dev`: Runs the app in development mode.
 - `npm run build`: Builds the app for production.
 - `npm run start`: Starts the production server.
+- `npm run test`: Runs the tests.
+
+## Testing
+
+This project includes a suite of tests to ensure reliability and functionality.
+
+To run the tests, use the following command:
+
+```bash
+npm run test
+```
+
+The tests cover various aspects of the application, including component rendering, API route handlers, and utility functions.
 
 ## 🤝 Contributing
 
