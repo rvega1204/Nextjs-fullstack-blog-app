@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fullstack Blog Application
 
-## Getting Started
+This is a fullstack web application built with **Next.js 16**, **React 19**, and **MongoDB**. It serves as a comprehensive demonstration of modern Next.js features, including the App Router, Server Components, Route Handlers, and robust error/loading states.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Full CRUD Operations**: Create, Read, Update, and Delete posts.
+- **Next.js App Router**: Utilizes the latest routing paradigm with nested layouts.
+- **Route Handlers**: API routes implemented in `app/api/posts` for backend logic.
+- **Database Integration**: Connects to MongoDB using **Mongoose** for data modeling.
+- **Form Handling**: robust forms built with **Formik** and validation using **Yup**.
+- **Styling**: Modern, responsive UI designed with **Tailwind CSS v4**.
+- **UX Enhancements**:
+  - Custom **Loading** states (`loading.js`)
+  - Custom **Error** handling (`error.js`)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 16](https://nextjs.org/)
+- **Library**: [React 19](https://react.dev/)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **ORM**: [Mongoose](https://mongoosejs.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Forms**: [Formik](https://formik.org/) + [Yup](https://github.com/jquense/yup)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+- `app/`: Main application source code (App Router structure).
+  - `api/`: Backend API routes.
+  - `posts/`: Frontend routes for post management (create, edit, view).
+- `models/`: Mongoose data models (e.g., `Posts.js`).
+- `utils/`: Utility functions, including database connection (`connectDb.js`).
+- `components/`: Reusable React components.
 
-To learn more about Next.js, take a look at the following resources:
+## 🏁 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Follow these steps to set up and run the project locally.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js installed on your machine.
+- A MongoDB database (local or Atlas).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <repository-url>
+    cd fullstack-blog-app
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup:**
+
+    Create a `.env` file in the root directory and add your MongoDB connection string:
+
+    ```env
+    MONGODB_URI=your_mongodb_connection_string
+    ```
+
+4.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Open the app:**
+
+    Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📜 Scripts
+
+- `npm run dev`: Runs the app in development mode.
+- `npm run build`: Builds the app for production.
+- `npm run start`: Starts the production server.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📸 Screenshots
+
+### Home Page
+
+![Home Page](./imgs/home.png)
+
+### Create Post Page
+
+![Create Post](./imgs/addPost.png)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📝 Author
+
+- **[Ricardo Vega](https://github.com/rvega1204)**

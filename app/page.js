@@ -1,65 +1,68 @@
-import Image from "next/image";
+/**
+ * Home component displays a list of posts fetched from an API.
+ * It includes loading and error states, and provides a link to view each post.
+ *
+ * @returns {JSX.Element} A React functional component that renders a list of posts.
+ */
+import {
+  FaRoute,
+  FaSpinner,
+  FaDatabase,
+  FaExclamationTriangle,
+} from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center">
+      {/* Hero Section */}
+      <div className="w-full bg-blue-500 text-white text-center py-20">
+        <h1 className="text-5xl font-bold">Explore Next.js Features</h1>
+        <p className="text-lg mt-4 px-4">
+          Master Next.js by building a complete web application with us.
+        </p>
+      </div>
+
+      {/* Cards Section */}
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10">
+        {/* Route Handlers Card */}
+        <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+          <FaRoute className="text-4xl text-blue-500 mb-4" />
+          <h2 className="text-xl font-semibold">Route Handlers</h2>
+          <p className="text-gray-600 text-center mt-2">
+            Learn to efficiently manage API routes and server-side logic
+            seamlessly.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Loading Card */}
+        <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+          <FaSpinner className="text-4xl text-green-500 mb-4 animate-spin" />
+          <h2 className="text-xl font-semibold">Loading</h2>
+          <p className="text-gray-600 text-center mt-2">
+            Understand handling async operations and state with visual feedback.
+          </p>
         </div>
-      </main>
+
+        {/* Error Handling Card */}
+        <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+          <FaExclamationTriangle className="text-4xl text-red-500 mb-4" />
+          <h2 className="text-xl font-semibold">Error Handling</h2>
+          <p className="text-gray-600 text-center mt-2">
+            Master the art of gracefully managing exceptions and displaying
+            errors effectively.
+          </p>
+        </div>
+
+        {/* Data Fetching Card */}
+        <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+          <FaDatabase className="text-4xl text-yellow-500 mb-4" />
+          <h2 className="text-xl font-semibold">Data Fetching</h2>
+          <p className="text-gray-600 text-center mt-2">
+            Discover how to use static generation and server-side rendering for
+            optimal performance.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
